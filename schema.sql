@@ -45,3 +45,22 @@ CREATE TABLE IF NOT EXISTS orders (
         FOREIGN KEY (client_id)
         REFERENCES clients(client_id)
 ) ENGINE=InnoDB;
+-- ======================
+-- order_details table
+-- ======================
+CREATE TABLE IF NOT EXISTS order_details (
+    order_detail_id INT AUTO_INCREMENT,
+    order_id INT NOT NULL,
+    product_id INT NOT NULL,
+    quantity INT NOT NULL,
+    unit_price DECIMAL(10,2) NOT NULL,
+    CONSTRAINT pk_order_details PRIMARY KEY (order_detail_id),
+    CONSTRAINT fk_order_details_order
+        FOREIGN KEY (order_id)
+        REFERENCES orders(order_id),
+    CONSTRAINT fk_order_details_product
+        FOREIGN KEY (product_id)
+        REFERENCES products(product_id),
+    CONSTRAINT chk_order_details_quantity CHECK (quantity > 0),
+    CONSTRAINT chk_order_details_unit_price CHECK (unit_price >= 0)
+) ENGINE=InnoDB;
