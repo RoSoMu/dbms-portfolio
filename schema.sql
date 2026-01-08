@@ -31,3 +31,17 @@ CREATE TABLE IF NOT EXISTS products (
     CONSTRAINT chk_products_price CHECK (price >= 0),
     CONSTRAINT chk_products_stock CHECK (stock >= 0)
 ) ENGINE=InnoDB;
+-- ======================
+-- orders table
+-- ======================
+CREATE TABLE IF NOT EXISTS orders (
+    order_id INT AUTO_INCREMENT,
+    client_id INT NOT NULL,
+    order_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    status VARCHAR(50) NOT NULL,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT pk_orders PRIMARY KEY (order_id),
+    CONSTRAINT fk_orders_client
+        FOREIGN KEY (client_id)
+        REFERENCES clients(client_id)
+) ENGINE=InnoDB;
