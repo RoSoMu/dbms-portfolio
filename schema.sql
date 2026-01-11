@@ -64,3 +64,20 @@ CREATE TABLE IF NOT EXISTS order_details (
     CONSTRAINT chk_order_details_quantity CHECK (quantity > 0),
     CONSTRAINT chk_order_details_unit_price CHECK (unit_price >= 0)
 ) ENGINE=InnoDB;
+-- ======================
+-- categories table
+-- ======================
+CREATE TABLE IF NOT EXISTS categories (
+    category_id INT AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    CONSTRAINT pk_categories PRIMARY KEY (category_id),
+    CONSTRAINT uq_categories_name UNIQUE (name)
+) ENGINE=InnoDB;
+-- ======================
+-- products → categories relationship
+-- ======================
+ALTER TABLE products
+ADD COLUMN category_id INT,
+ADD CONSTRAINT fk_products_category
+    FOREIGN KEY (category_id)
+    REFERENCES categories(category_id);
