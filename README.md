@@ -24,7 +24,7 @@ Relationships are enforced using **primary keys, foreign keys, and constraints**
 
 ## Repository Structure
 
-```text```
+```text
 dbms-portfolio/
 │
 ├── schema.sql
@@ -50,6 +50,7 @@ dbms-portfolio/
 │   Git ignore rules (macOS artifacts, etc.)
 │
 └── README.md
+```
 
 ## Reto Breakdown
 
