@@ -1,4 +1,5 @@
 -- Sample data for Reto 2 and Reto 3
+USE online_shop_db;
 
 -- Categories
 INSERT INTO categories (name) VALUES
@@ -27,4 +28,5 @@ INSERT INTO order_details (order_id, product_id, quantity, unit_price) VALUES
 (1, 1, 1, 29.99),
 (1, 2, 2, 19.99),
 (2, 3, 3, 14.99);
+
 
