@@ -49,7 +49,7 @@ dbms-portfolio/
 ├── .gitignore
 │   Git ignore rules (macOS artifacts, etc.)
 │
-└── README.md
+└── README.md```
 
 ## Reto Breakdown
 
