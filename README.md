@@ -24,6 +24,7 @@ Relationships are enforced using **primary keys, foreign keys, and constraints**
 
 ## Repository Structure
 
+```text
 dbms-portfolio/
 │
 ├── schema.sql
