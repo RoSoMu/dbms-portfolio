@@ -5,20 +5,20 @@
 This repository contains a small but complete **Database Management Systems (DBMS)** portfolio built around an **online sho**p use case.
 
 The work is structured as three incremental challenges (Retos), progressing from:
-	•	relational schema design,
-	•	to analytical SQL queries,
-	•	to cross-database portability and procedural SQL.
+- relational schema design,
+- to analytical SQL queries,
+- to cross-database portability and procedural SQL.
 
 The same conceptual data model is implemented using **MySQL** and **SQL Server**, highlighting both similarities and engine-specific differences.
 
 ## Database Model
 
 The core domain models an online shop with the following entities:
-	•	**clients** – customers placing orders
-	•	**products** – items for sale
-	•	**categories** – product classification
-	•	**orders** – customer purchases
-	•	**order_details** – line items linking orders and products
+- **clients** – customers placing orders
+- **products** – items for sale
+- **categories** – product classification
+- **orders** – customer purchases
+- **order_details** – line items linking orders and products
 
 Relationships are enforced using **primary keys, foreign keys, and constraints**, and visualized via ER diagrams.
 
@@ -53,41 +53,42 @@ dbms-portfolio/
 ## Reto Breakdown
 
 **Reto 1 – Relational Schema (MySQL)**
-	•	Database and table creation
-	•	Primary keys, foreign keys, and constraints
-	•	InnoDB engine usage
-	•	ER diagram export
+- Database and table creation
+- Primary keys, foreign keys, and constraints
+- InnoDB engine usage
+- ER diagram export
 
 **Reto 2 – Queries and Data (MySQL**)
-	•	Sample data insertion
-	•	Analytical queries using JOIN, GROUP BY, and CTEs:
-		•	total sales by category
-		•	average spending per client
-		•	most sold products
-	•	Updated ER diagram reflecting schema evolution
+- Sample data insertion
+- Analytical queries using JOIN, GROUP BY, and CTEs:
+	- total sales by category
+ 	- average spending per client
+  	- most sold products
+- Updated ER diagram reflecting schema evolution
 
 **Reto 3 – SQL Server (T-SQL**)
-	•	Full schema rewritten for SQL Server:
-		•	IDENTITY(1,1)
-		•	DATETIME2
-		•	strict GROUP BY semantics
-	•	Queries rewritten in T-SQL
-	•	Procedural SQL example using:
-		•	variables
-		•	WHILE loop
-		•	PRINT
-	•	Focus on engine-aware, portable SQL design
+- Full schema rewritten for SQL Server:
+	- IDENTITY(1,1)
+ 	- DATETIME2
+  	- strict GROUP BY semantics
+- Queries rewritten in T-SQL
+- Procedural SQL example using:
+	- variables
+ 	- WHILE loop
+  	- PRINT
+- Focus on engine-aware, portable SQL design
 
 ## Technologies Used
 
-	•	**MySQL 8.x**
-	•	**SQL Server (T-SQL syntax)**
-	•	**MySQL Workbench** (ER diagrams*
-	•	**Git & GitHub** (version control)
+- **MySQL 8.x**
+- **SQL Server (T-SQL syntax)**
+- **MySQL Workbench** (ER diagrams)
+- **Git & GitHub** (version control)
+  
 ## Notes
-	•	MySQL and SQL Server scripts are intentionally kept separate.
-	•	SQL Server scripts are not meant to be executed in MySQL.
-	•	Emphasis is placed on **clarity, correctness, and portability**, not optimization.
+- MySQL and SQL Server scripts are intentionally kept separate.
+- SQL Server scripts are not meant to be executed in MySQL.
+- Emphasis is placed on **clarity, correctness, and portability**, not optimization.
 
 ## Author
 
