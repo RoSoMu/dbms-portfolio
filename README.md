@@ -80,14 +80,32 @@ dbms-portfolio/
   	- PRINT
 - Focus on engine-aware, portable SQL design
 
+## Reto 3 – SQL Server (T-SQL)
+
+This part of the project reproduces the online shop database using
+Microsoft SQL Server (T-SQL).
+
+The script is fully re-runnable and includes:
+- Database and table creation
+- Sample data insertion
+- Data normalization (foreign key wiring)
+- Analytical queries
+- A procedural T-SQL example
+
+Data normalization is performed before analytical queries to ensure
+correct relational results.
+
 ## Technologies Used
 
 - **MySQL 8.x**
-- **SQL Server (T-SQL syntax)**
+- **Microsoft SQL Server (T-SQL)**
+- **Docker** (SQL Server container for local execution)
+- **Azure Data Studio** (SQL Server client and query execution)
 - **MySQL Workbench** (ER diagrams)
 - **Git & GitHub** (version control)
   
 ## Notes
+
 - MySQL and SQL Server scripts are intentionally kept separate.
 - SQL Server scripts are not meant to be executed in MySQL.
 - Emphasis is placed on **clarity, correctness, and portability**, not optimization.

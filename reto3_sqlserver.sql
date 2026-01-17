@@ -1,3 +1,24 @@
+-- Create and use database for Reto 3
+IF DB_ID('online_shop_reto3') IS NULL
+BEGIN
+    CREATE DATABASE online_shop_reto3;
+END;
+GO
+
+USE online_shop_reto3;
+GO
+
+-- ===============================
+-- Drop tables for safe re-runs
+-- ===============================
+
+IF OBJECT_ID('order_details', 'U') IS NOT NULL DROP TABLE order_details;
+IF OBJECT_ID('orders', 'U') IS NOT NULL DROP TABLE orders;
+IF OBJECT_ID('products', 'U') IS NOT NULL DROP TABLE products;
+IF OBJECT_ID('categories', 'U') IS NOT NULL DROP TABLE categories;
+IF OBJECT_ID('clients', 'U') IS NOT NULL DROP TABLE clients;
+GO
+
 -- Reto 3 - SQL Server (T-SQL)
 -- Database Management Systems course
 -- Engine: Microsoft SQL Server
@@ -18,7 +39,9 @@ CREATE TABLE clients (
 
 -- insert values
 INSERT INTO clients (first_name, last_name, email)
-VALUES ('Ana', 'García', 'ana.garcia@example.com');
+VALUES 
+('Ana', 'García', 'ana.garcia@example.com'), 
+('Luís', 'Rodríguez', 'luis.rodriguez@example.com');
 
 -- ======================
 -- products table
@@ -117,6 +140,14 @@ VALUES
 (1, 1, 1, 29.99),
 (1, 2, 2, 19.99),
 (2, 3, 3, 14.99);
+
+-- ======================
+-- Data normalization / relationship wiring
+-- ======================
+
+UPDATE products SET category_id = 1 WHERE name = 'SQL Fundamentals Book';
+UPDATE products SET category_id = 2 WHERE name = 'Wireless Mouse';
+UPDATE products SET category_id = 3 WHERE name = 'T-Shirt';
 
 -- ======================
 -- Reto 3 - Query 1

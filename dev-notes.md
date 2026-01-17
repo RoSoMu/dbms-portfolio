@@ -66,7 +66,17 @@ They focus on commands, pitfalls, and reminders rather than theory.
   - SET
   - WHILE
   - PRINT
+---
+## Reto 3 – Debugging & Lessons Learned
 
+- Initial execution of the analytical query "total sales per category"
+  returned no rows.
+- Root cause: `products.category_id` was NULL after initial inserts.
+- Fix: added a dedicated "data normalization / relationship wiring"
+  section using UPDATE statements before running analytical queries.
+- Lesson: analytical queries assume fully established relationships;
+  silent empty results often indicate missing foreign key data rather
+  than query errors.
 ---
 
 ## Git Workflow
