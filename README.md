@@ -60,7 +60,7 @@ dbms-portfolio/
 - InnoDB engine usage
 - ER diagram export
 
-**Reto 2 – Queries and Data (MySQL**)
+**Reto 2 – Queries and Data (MySQL)**
 - Sample data insertion
 - Analytical queries using JOIN, GROUP BY, and CTEs:
 	- total sales by category
@@ -68,7 +68,7 @@ dbms-portfolio/
   	- most sold products
 - Updated ER diagram reflecting schema evolution
 
-**Reto 3 – SQL Server (T-SQL**)
+**Reto 3 – SQL Server (T-SQL)**
 - Full schema rewritten for SQL Server:
 	- IDENTITY(1,1)
  	- DATETIME2
@@ -80,8 +80,7 @@ dbms-portfolio/
   	- PRINT
 - Focus on engine-aware, portable SQL design
 
-## Reto 3 – SQL Server (T-SQL)
-
+**Reto 3 – SQL Server (T-SQL)- update**
 This part of the project reproduces the online shop database using
 Microsoft SQL Server (T-SQL).
 
@@ -95,6 +94,25 @@ The script is fully re-runnable and includes:
 Data normalization is performed before analytical queries to ensure
 correct relational results.
 
+**Reto 4 – Oracle SQL & PL/SQL**
+
+This section recreates the online shop database using **Oracle SQL** and
+demonstrates procedural logic with **PL/SQL**.
+
+It includes:
+- Oracle-compatible table definitions and sequences
+- Sample data insertion
+- Referential integrity via foreign keys
+- Stored procedures for:
+  - Searching orders by criteria
+  - Updating client addresses
+  - Recalculating order totals
+  - Safely deleting clients with dependency checks
+- Inline test blocks using `DBMS_OUTPUT`
+
+The script was executed using an Oracle XE instance running in Docker and
+validated through Oracle SQL Developer.
+
 ## Technologies Used
 
 - **MySQL 8.x**
@@ -103,6 +121,9 @@ correct relational results.
 - **Azure Data Studio** (SQL Server client and query execution)
 - **MySQL Workbench** (ER diagrams)
 - **Git & GitHub** (version control)
+- **Oracle SQL & PL/SQL**
+- **Docker** (local database containers)
+- **Oracle SQL Developer**
   
 ## Notes
 

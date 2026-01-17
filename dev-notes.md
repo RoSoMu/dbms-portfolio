@@ -78,6 +78,39 @@ They focus on commands, pitfalls, and reminders rather than theory.
   silent empty results often indicate missing foreign key data rather
   than query errors.
 ---
+## Oracle setup (Reto 4)
+
+### Oracle XE via Docker
+Oracle XE was run locally using Docker.
+
+Container image:
+- `gvenzl/oracle-xe:21-slim`
+
+Port mapping:
+- `1521` (listener)
+
+---
+
+### User creation (required)
+
+PL/SQL scripts were executed under a dedicated user (`RETO4`).
+This user must be created from a privileged account (`SYSTEM`) **inside the PDB**.
+
+```sql
+-- Ensure connection is to the pluggable database
+SHOW CON_NAME;
+-- Expected: XEPDB1
+
+CREATE USER reto4 IDENTIFIED BY xxxxxxxxxxxx;
+
+GRANT
+    CREATE SESSION,
+    CREATE TABLE,
+    CREATE SEQUENCE,
+    CREATE PROCEDURE,
+    CREATE VIEW
+TO reto4;
+---
 
 ## Git Workflow
 
